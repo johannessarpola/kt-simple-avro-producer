@@ -4,7 +4,7 @@ FROM gradle:jdk${VERSION}-alpine as build
 
 COPY . /src
 WORKDIR /src
-RUN ./gradlew --no-daemon shadowJar
+RUN gradle --no-daemon shadowJar
 
 FROM eclipse-temurin:${VERSION}-jre-alpine
 
