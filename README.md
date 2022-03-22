@@ -5,7 +5,7 @@ default schema, expects it to exist in schema registry
 {
     "type": "record",
     "name": "event",
-	  "fields" : [
+    "fields" : [
         {"name": "id", "type": "string"},
         {"name": "source", "type": "string"},
         {"name": "severity", "type": "int"},
