@@ -2,11 +2,12 @@
 
 Use env variables to connect it to broker and schema registry
 
+```
 - name: SCHEMA_REGISTRY
   value: <addr:port>
 - name: KAFKA_BOOTSTRAP
   value: <addr:port>
-
+```
 
 default schema, expects it to exist in schema registry
 ```
