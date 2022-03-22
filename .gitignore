@@ -199,3 +199,5 @@ bin
 .idea
 .vscode
 gradle
+gradlew
+gradlew.bat

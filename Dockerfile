@@ -1,6 +1,6 @@
 ARG VERSION=11
 
-FROM openjdk:${VERSION}-jdk-buster as build
+FROM gradle:jdk${VERSION}-alpine as build
 
 COPY . /src
 WORKDIR /src
