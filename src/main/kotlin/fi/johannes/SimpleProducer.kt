@@ -34,10 +34,8 @@ class SimpleProducer(brokers: String, schemaRegistryUrl: String, val topic: Stri
         while (true) {
 
             val nxt = source()
-            val schema = Schema.Parser().parse(nxt.loadSchema());
-            val record = GenericData.Record(schema)
-
-            val futureResult = producer.send(ProducerRecord(topic, record))
+            logger.info("Producing $nxt")
+            val futureResult = producer.send(ProducerRecord(topic, nxt.toRecord()))
             Thread.sleep(waitTimeBetweenIterationsMs)
             futureResult.get()
         }
