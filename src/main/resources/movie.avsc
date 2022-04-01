@@ -1,0 +1,34 @@
+{
+  "namespace": "fi.johannes.movies",
+  "type": "record",
+  "name": "Movie",
+  "fields": [
+    {
+      "name": "title",
+      "type": "string"
+    },
+    {
+      "name": "year",
+      "type": "int"
+    },
+    {
+      "name": "genre",
+      "default" : "unknown",
+      "type": {
+        "type": "enum",
+        "name": "Genre",
+        "namespace": "fi.johannes.movies",
+        "default" : "unknown",
+        "symbols": [
+          "thriller",
+          "action",
+          "mystery",
+          "horror",
+          "romance",
+          "comedy",
+          "unknown"
+        ]
+      }
+    }
+  ]
+}
